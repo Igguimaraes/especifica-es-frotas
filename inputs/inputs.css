@@ -1,0 +1,173 @@
+.main-Input {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content-Input {
+  background-color: #1b2a4a;
+  width: 1024px;
+  max-width: 95%;
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.content-Input::-webkit-scrollbar {
+  width: 6px;
+}
+.content-Input::-webkit-scrollbar-track {
+  background: transparent;
+}
+.content-Input::-webkit-scrollbar-thumb {
+  background: #3a5a8a;
+  border-radius: 3px;
+}
+
+.content-Input h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* === SEÇÕES === */
+.section-title {
+  color: #8aabca;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 20px 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2a406a;
+}
+
+.section-title:first-of-type {
+  margin-top: 0;
+}
+
+/* === GRID DO FORMULÁRIO === */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+/* === GRUPO DE CAMPO (LABEL + INPUT) === */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #b0c4de;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2a406a;
+  background-color: #12203e;
+  color: #e0e8f0;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a8ad4;
+  box-shadow: 0 0 0 3px rgba(74, 138, 212, 0.15);
+}
+
+.form-group input::placeholder {
+  color: #4a6a8a;
+  font-size: 13px;
+}
+
+/* === SELECT PERSONALIZADO === */
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%238aabca' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+.form-group select option {
+  background-color: #1b2a4a;
+  color: #e0e8f0;
+}
+
+/* === BOTÕES === */
+.buttons-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btnCreate {
+  background-color: #2563eb;
+  color: white;
+  padding: 11px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.btnCreate:hover {
+  background-color: #1d4ed8;
+}
+
+.btnCreate:active {
+  transform: scale(0.97);
+}
+
+.btnExit {
+  background-color: #4b5563;
+  color: white;
+  padding: 11px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.btnExit:hover {
+  background-color: #374151;
+}
+
+.btnExit:active {
+  transform: scale(0.97);
+}

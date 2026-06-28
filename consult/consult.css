@@ -1,0 +1,214 @@
+.consultContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+
+/* ===== PAINEL DIREITO (lista) ===== */
+.consultRight {
+  background-color: #1b2a4a;
+  width: 300px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.consultRight h1 {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.consultRight input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2a406a;
+  background-color: #12203e;
+  color: #e0e8f0;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.consultRight input::placeholder {
+  color: #4a6a8a;
+  text-align: center;
+}
+
+.consultRight input:focus {
+  outline: none;
+  border-color: #4a8ad4;
+  box-shadow: 0 0 0 3px rgba(74, 138, 212, 0.15);
+}
+
+.btnBusca {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+.btnBusca:hover,
+.btnEdit:hover {
+  background-color: #1d4ed8;
+}
+
+.btnReset {
+  background-color: #16a34a;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600px;
+  margin-bottom: 16px;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btnReset:hover {
+  background-color: #16a37a;
+}
+
+.btnEdit {
+  width: 10%;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+.btnExc {
+  margin-left: 5px;
+  width: 10%;
+  background-color: #e23232;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btnExc:hover {
+  background-color: #950606;
+  transition: 0.3s;
+}
+
+.consultRight ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.consultRight ul li {
+  color: #b0c4de;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.consultRight ul li:hover {
+  background-color: #2a406a;
+  color: #ffffff;
+}
+
+/* Scrollbar da lista */
+.consultRight ul::-webkit-scrollbar {
+  width: 4px;
+}
+.consultRight ul::-webkit-scrollbar-thumb {
+  background: #3a5a8a;
+  border-radius: 2px;
+}
+
+/* ===== PAINEL ESQUERDO (especificações) ===== */
+.consultLeft {
+  background-color: #e8ecf1;
+  flex: 1;
+  min-height: 100vh;
+  padding: 32px 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.consultLeft h1 {
+  font-size: 22px;
+  color: #1b2a4a;
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #c8d0da;
+}
+.consultLeft p {
+  font-size: 15px;
+  color: #2a3a5a;
+  margin: 8px 0;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.consultLeft p strong {
+  color: #1b2a4a;
+  display: inline-block;
+  min-width: 120px;
+}
+
+/* === IMAGEM DA FROTA === */
+.frota-image {
+  width: 100%;
+  max-width: 400px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  display: block;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+}
+.content-consult {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+  text-align: center;
+}
+.content-consult,
+.frota-image {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1b2a4a;
+  border-radius: 8px;
+}
